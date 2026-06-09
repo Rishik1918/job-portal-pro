@@ -9,6 +9,17 @@
   --border-color-hover: rgba(255, 255, 255, 0.15);
   --danger: #ef4444;
   --success: #10b981;
+
+  /* Theme assets: Dark mode defaults */
+  --nav-bg: rgba(8, 12, 20, 0.75);
+  --card-bg: linear-gradient(180deg, rgba(20, 27, 45, 0.75) 0%, rgba(15, 23, 42, 0.75) 100%);
+  --card-bg-alt: linear-gradient(145deg, rgba(20, 27, 45, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+  --modal-bg: linear-gradient(185deg, rgba(20, 27, 45, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+  --stats-bg: linear-gradient(135deg, rgba(20, 27, 45, 0.6) 0%, rgba(88, 28, 135, 0.15) 100%);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  --input-bg: rgba(8, 12, 20, 0.6);
+  --input-bg-focus: rgba(8, 12, 20, 0.85);
 }
 
 .light-theme {
@@ -20,6 +31,17 @@
   --text-muted: #475569;
   --border-color: rgba(0, 0, 0, 0.08);
   --border-color-hover: rgba(0, 0, 0, 0.16);
+
+  /* Theme assets: Light mode overrides */
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  --card-bg-alt: linear-gradient(145deg, rgba(255, 255, 255, 0.75) 0%, rgba(248, 250, 252, 0.75) 100%);
+  --modal-bg: linear-gradient(185deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 100%);
+  --stats-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(139, 92, 246, 0.05) 100%);
+  --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  --modal-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --input-bg-focus: #ffffff;
 }
 
 * {

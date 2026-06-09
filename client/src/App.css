@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 6%;
-  background-color: rgba(8, 12, 20, 0.7);
+  background-color: var(--nav-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
@@ -118,8 +118,7 @@
 }
 
 .auth-card {
-  background-color: var(--bg-secondary);
-  background: linear-gradient(185deg, rgba(20, 27, 45, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%);
+  background: var(--card-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: 3rem;
@@ -127,7 +126,7 @@
   width: 100%;
   max-width: 480px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  box-shadow: var(--card-shadow);
 }
 
 .auth-title {
@@ -157,7 +156,7 @@
 .form-control {
   width: 100%;
   padding: 0.85rem 1.1rem;
-  background-color: rgba(8, 12, 20, 0.6);
+  background-color: var(--input-bg);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   color: var(--text-main);
@@ -167,7 +166,7 @@
 
 .form-control:focus {
   border-color: var(--accent-indigo);
-  background-color: rgba(8, 12, 20, 0.85);
+  background-color: var(--input-bg-focus);
   box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
   outline: none;
 }
@@ -192,7 +191,7 @@ textarea.form-control {
 
 /* Job Cards */
 .job-card {
-  background: linear-gradient(145deg, rgba(20, 27, 45, 0.45) 0%, rgba(15, 23, 42, 0.45) 100%);
+  background: var(--card-bg-alt);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
@@ -202,7 +201,7 @@ textarea.form-control {
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  box-shadow: var(--card-shadow);
 }
 
 .job-card:hover {
@@ -267,12 +266,12 @@ textarea.form-control {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, rgba(20, 27, 45, 0.6) 0%, rgba(88, 28, 135, 0.15) 100%);
+  background: var(--stats-bg);
   border: 1px solid var(--border-color);
   padding: 2rem;
   border-radius: 0.8rem;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-shadow);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: border-color 0.25s;
@@ -300,7 +299,7 @@ textarea.form-control {
 
 /* Search and Filters Engine Box */
 .search-filter-box {
-  background: linear-gradient(145deg, rgba(20, 27, 45, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%);
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
@@ -311,7 +310,7 @@ textarea.form-control {
   flex-wrap: wrap;
   gap: 1.25rem;
   align-items: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--card-shadow);
 }
 
 .search-input-group {
@@ -421,13 +420,13 @@ h2, h3 {
 }
 
 .modal-content {
-  background: linear-gradient(185deg, rgba(20, 27, 45, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+  background: var(--modal-bg);
   border: 1px solid var(--border-color-hover);
   border-radius: 1rem;
   width: 100%;
   max-width: 640px;
   padding: 2.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  box-shadow: var(--modal-shadow);
   max-height: 90vh;
   overflow-y: auto;
 }
