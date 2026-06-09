@@ -1,0 +1,26 @@
+# Node dependency directories
+node_modules/
+
+# Local configuration environment variables
+.env
+
+# Production build outputs
+client/dist/
+client/build/
+
+# Local media uploads (temporary logs/PDFs/logos from dev testing)
+server/uploads/resumes/resume-*
+server/uploads/logos/logo-*
+
+# Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS systems metadata
+.DS_Store
+Thumbs.db
