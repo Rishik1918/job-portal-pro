@@ -4,7 +4,7 @@ ASSIGNMENT DAY-13,14(JUNE-5,6-2026)
 
 A complete full-stack web application designed for job seekers (Candidates) and hiring managers (Recruiters).
 
-## 🛠️ Mandatory Tech Stack
+## Mandatory Tech Stack
 - **Frontend**: React.js (Hooks, `useState`, `useEffect`), Custom CSS, Fetch API
 - **Backend**: Node.js, Express.js (RESTful API Architecture, JSON payloads)
 - **Database**: MongoDB, Mongoose ORM
@@ -12,7 +12,7 @@ A complete full-stack web application designed for job seekers (Candidates) and 
 
 ---
 
-## 🚀 Primary Features
+## Primary Features
 
 ### 1. Job Management Features
 - **Create Job**: Recruiters can launch new opportunities specifying Title, Company, Geographic Location, Job Type, Salary (INR), and Full Description.
@@ -40,7 +40,7 @@ A complete full-stack web application designed for job seekers (Candidates) and 
 
 ---
 
-## 🏁 Quick Startup Guide
+## Quick Startup Guide
 
 ### Backend Setup
 1. Open a terminal pointing to `server/`.
@@ -65,3 +65,24 @@ A complete full-stack web application designed for job seekers (Candidates) and 
    npm run dev
    ```
    *The client is ready at [http://localhost:5173/](http://localhost:5173/).*
+
+
+## API Endpoints Documentation
+
+### Authentication Routes (`/api/auth`)
+- **POST** `/api/auth/register` - Register a new user (Candidate or Recruiter). Validates email, password strength, and mandatory fields.
+- **POST** `/api/auth/login` - Authenticate a user and return a JWT token.
+- **GET** `/api/auth/profile` - Fetch the profile details of the authenticated user (requires Bearer Token).
+- **POST** `/api/auth/forgot-password` - Resets a user's password to 'password123' for recovery.
+
+### Job Opportunity Routes (`/api/jobs`)
+- **GET** `/api/jobs` - Retrieve all job postings with optional query filter params (`search`, `location`, `type`, `minSalary`, `maxSalary`, `sort`, `page`, `limit`, `postedBy`).
+- **GET** `/api/jobs/:id` - Retrieve complete specifications and details of a single job.
+- **POST** `/api/jobs` - Create a new job listing (requires Recruiter role, Bearer Token, optional company logo upload).
+- **PUT** `/api/jobs/:id` - Update details of an existing job listing (requires Recruiter owner, Bearer Token, optional logo upload).
+- **DELETE** `/api/jobs/:id` - Permanently delete a job listing and clean up associated applications (requires Recruiter owner, Bearer Token).
+- **POST** `/api/jobs/:id/apply` - Submit a job application with name, email, phone, and PDF resume upload (requires Candidate role, Bearer Token).
+- **GET** `/api/jobs/:id/applications` - Retrieve all applications received for a specific listing (requires Recruiter owner, Bearer Token).
+- **POST** `/api/jobs/:id/save` - Bookmark/unbookmark a job opportunity (requires Candidate role, Bearer Token).
+- **GET** `/api/jobs/recruiter/stats` - Fetch aggregated recruiter listing performance metrics (requires Recruiter role, Bearer Token).
+- **GET** `/api/jobs/candidate/applications` - Fetch all applications submitted by the logged-in candidate (requires Candidate role, Bearer Token).
