@@ -1,3 +1,5 @@
+ASSIGNMENT DAY-13,14(JUNE-5,6-2026)
+
 # JobPortalPro - Career Console & Job Portal Platform
 
 A complete full-stack web application designed for job seekers (Candidates) and hiring managers (Recruiters).
